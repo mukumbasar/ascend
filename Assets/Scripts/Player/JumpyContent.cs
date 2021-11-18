@@ -10,11 +10,10 @@ public class JumpyContent : MonoBehaviour
     private Rigidbody2D rb;
     public float jumpValue;
     public LayerMask platformMask;
-    public LayerMask wallMask;
-
+    
     private Vector3 Flipper = new Vector3(0, 180, 0);
+    
     private bool isFacingRight;
-
     private bool jumpValueEnhancing;
     private bool rightJump;
     private bool leftJump;
@@ -31,35 +30,31 @@ public class JumpyContent : MonoBehaviour
     }
     private void Update()
     {
-      
+        //changes the physics material of the character in air to enable wall bouncing and achieve stable landing
+        MaterialChanger();
 
-        //physics material changer
-
-        if(!IsGrounded())
-        {
-            rb.sharedMaterial = bouncyMat;
-
-        }
-        else
-        {
-            rb.sharedMaterial = normalMat;
-        }
-     
-        //these two flip player object for accurate jumping
+        //flips the character for accurate jumping
         FlipPlayer();
 
+        //makes the character jump, duh
+        Jump();
+
+    }
+
+    private void Jump()
+    {
         if (Input.GetKey(KeyCode.Space) && IsGrounded())
         {
             jumpValueEnhancing = true;
-           
-            
+
+
         }
-        
-        if(jumpValue >= 20f && IsGrounded() && isFacingRight)
+
+        if (jumpValue >= 20f && IsGrounded() && isFacingRight)
         {
             rightJump = true;
-            
-            
+
+
         }
 
         if (jumpValue >= 20f && IsGrounded() && !isFacingRight)
@@ -77,10 +72,19 @@ public class JumpyContent : MonoBehaviour
         {
             leftJump = true;
         }
+    }
 
-        
+    private void MaterialChanger()
+    {
+        if (!IsGrounded())
+        {
+            rb.sharedMaterial = bouncyMat;
 
-
+        }
+        else
+        {
+            rb.sharedMaterial = normalMat;
+        }
     }
 
     private void FixedUpdate()
@@ -92,7 +96,7 @@ public class JumpyContent : MonoBehaviour
         if(rightJump)
         {
             float tempValue = jumpValue;
-            rb.velocity = new Vector2(tempValue, 2f*tempValue);
+            rb.velocity = new Vector2(0.8f*tempValue, 2.5f*tempValue);
             jumpValueEnhancing = false;
             rightJump = false;
             Invoke("ResetJumpValue", 0.2f);
@@ -101,7 +105,7 @@ public class JumpyContent : MonoBehaviour
         if(leftJump)
         { 
             float tempValue = jumpValue;
-            rb.velocity = new Vector2(-tempValue, 2f*tempValue);
+            rb.velocity = new Vector2(-0.8f*tempValue, 2.5f*tempValue);
             jumpValueEnhancing = false;
             leftJump = false;
             Invoke("ResetJumpValue", 0.2f);
