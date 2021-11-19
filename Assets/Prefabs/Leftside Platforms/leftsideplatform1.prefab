@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 1541212662962523090}
   - component: {fileID: 1541212662962523089}
   - component: {fileID: 1564683006509963472}
-  - component: {fileID: 1836305273475156917}
+  - component: {fileID: 3311100999901368297}
   m_Layer: 7
-  m_Name: platform1
+  m_Name: leftsideplatform1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -110,7 +110,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1836305273475156917
+--- !u!114 &3311100999901368297
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,12 +119,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1541212662962523088}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55e8e7dfc3f2219489c1b8628a5c5c5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 9102b5ac57db8a045b1dfef07e10acad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   prefabs:
   - {fileID: 1541212662962523088}
-  - {fileID: 60132461333290725, guid: 5035931b8a290084a846029f89d50568, type: 3}
-  - {fileID: 7630432854330842325, guid: 885f17bd1d2d4f540825582635cc19a0, type: 3}
+  - {fileID: 60132461333290725, guid: 1b361188e623bbe4493b0c8dacb67f59, type: 3}
+  - {fileID: 7630432854330842325, guid: f8cf78965a0d6214eadfbd86fa008052, type: 3}
   platformGap: 16.74
-  camMoveSpeed: 6
+  camMoveSpeed: 0

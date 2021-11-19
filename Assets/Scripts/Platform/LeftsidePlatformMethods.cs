@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlatformMethods : MonoBehaviour
+public class LeftsidePlatformMethods : MonoBehaviour
 {
     public GameObject[] prefabs;
     public float platformGap = 16.74f;
@@ -12,7 +12,7 @@ public class PlatformMethods : MonoBehaviour
     public float camMoveSpeed;
     private bool moved;
 
-    
+
 
     private void Awake()
     {
@@ -29,7 +29,7 @@ public class PlatformMethods : MonoBehaviour
             StartCoroutine("startCrumbling", 2f);
             spawned = true;
             moved = true;
-            
+
         }
     }
 
@@ -42,12 +42,12 @@ public class PlatformMethods : MonoBehaviour
             cam.transform.position = Vector3.Lerp(currentCamPos, newCamPos, camMoveSpeed * Time.deltaTime);
             moved = false;
         }
-        
+
     }
     private void spawnPlatfrom()
     {
         var prefabIndex = Random.Range(0, prefabs.Length);
-        var positionX = Random.Range(-5.5f, 5.55f);
+        var positionX = Random.Range(-5.5f, -1);
         var position = new Vector3(positionX, this.gameObject.transform.position.y + platformGap, prefabs[prefabIndex].transform.position.z);
 
         Instantiate(prefabs[prefabIndex], position, prefabs[prefabIndex].transform.rotation);

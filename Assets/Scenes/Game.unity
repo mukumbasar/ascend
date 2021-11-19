@@ -770,10 +770,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 425634958fa4d424c8bf3045deb3e165, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabs:
+  rightsidePrefabs:
   - {fileID: 1541212662962523088, guid: a637a07dad51c45409ef23c1f5d6555e, type: 3}
   - {fileID: 60132461333290725, guid: 5035931b8a290084a846029f89d50568, type: 3}
   - {fileID: 7630432854330842325, guid: 885f17bd1d2d4f540825582635cc19a0, type: 3}
+  leftsidePrefabs:
+  - {fileID: 1541212662962523088, guid: 3e835a409c8f9cb4c90e132fdae80b69, type: 3}
+  - {fileID: 60132461333290725, guid: 1b361188e623bbe4493b0c8dacb67f59, type: 3}
+  - {fileID: 7630432854330842325, guid: f8cf78965a0d6214eadfbd86fa008052, type: 3}
 --- !u!4 &1525835436
 Transform:
   m_ObjectHideFlags: 0
