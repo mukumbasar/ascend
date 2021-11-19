@@ -9,7 +9,7 @@ public class LeftsidePlatformMethods : MonoBehaviour
     private bool spawned;
 
     private GameObject cam;
-    public float camMoveSpeed;
+    public float camMoveSpeed = 2f;
     private bool moved;
 
 
@@ -38,8 +38,8 @@ public class LeftsidePlatformMethods : MonoBehaviour
         if (moved)
         {
             var currentCamPos = cam.transform.position;
-            var newCamPos = new Vector3(cam.transform.position.x, cam.transform.position.y + platformGap, cam.transform.position.z);
-            cam.transform.position = Vector3.Lerp(currentCamPos, newCamPos, camMoveSpeed * Time.deltaTime);
+            var newCamPos = new Vector3(cam.transform.position.x, this.gameObject.transform.position.y, cam.transform.position.z);
+            cam.transform.position = newCamPos;
             moved = false;
         }
 
