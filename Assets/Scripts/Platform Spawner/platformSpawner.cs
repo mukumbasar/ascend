@@ -8,12 +8,13 @@ public class platformSpawner : MonoBehaviour
     public GameObject[] leftsidePrefabs;
 
     private float positionX1;
+    private float twoSidedDice;
 
     private bool spawned = false;  
     private void Awake()
     {
 
-        positionX1 = Random.Range(-5.5f, 5.5f);
+        twoSidedDice = Random.Range(-1, 1);
         
         CreateTheFirstPlatform();
 
@@ -23,8 +24,9 @@ public class platformSpawner : MonoBehaviour
     {
        
 
-        if(positionX1 >= 0)
+        if(twoSidedDice >= 0)
         {
+            positionX1 = Random.Range(2, 5.5f);
             var prefabIndex1 = Random.Range(0, rightsidePrefabs.Length);
             var position1 = new Vector3(positionX1, 2.73f, rightsidePrefabs[prefabIndex1].transform.position.z);
 
@@ -32,8 +34,9 @@ public class platformSpawner : MonoBehaviour
 
             spawned = true;
         }
-        else if(positionX1 < 0)
+        else if(twoSidedDice < 0)
         {
+            positionX1 = Random.Range(-5.5f, -2f);
             var prefabIndex1 = Random.Range(0, leftsidePrefabs.Length);
             var position1 = new Vector3(positionX1, 2.73f, leftsidePrefabs[prefabIndex1].transform.position.z);
 
@@ -46,20 +49,20 @@ public class platformSpawner : MonoBehaviour
 
     private void Update()
     {
-        if (positionX1 > 0 && spawned == true)
+        if (twoSidedDice >= 0 && spawned == true)
         {
             var prefabIndex2 = Random.Range(0, leftsidePrefabs.Length);
-            var positionX2 = Random.Range(-5.5f, 0);
+            var positionX2 = Random.Range(-5.5f, -2);
             var position2 = new Vector3(positionX2, 11.1f, leftsidePrefabs[prefabIndex2].transform.position.z);
 
             Instantiate(leftsidePrefabs[prefabIndex2], position2, leftsidePrefabs[prefabIndex2].transform.rotation);
 
             spawned = false;
         }
-        else if (positionX1 < 0 && spawned == true)
+        else if (twoSidedDice < 0 && spawned == true)
         {
             var prefabIndex2 = Random.Range(0, rightsidePrefabs.Length);
-            var positionX2 = Random.Range(0, 5.55f);
+            var positionX2 = Random.Range(2, 5.55f);
             var position2 = new Vector3(positionX2, 11.1f, rightsidePrefabs[prefabIndex2].transform.position.z);
 
             Instantiate(rightsidePrefabs[prefabIndex2], position2, rightsidePrefabs[prefabIndex2].transform.rotation);

@@ -9,10 +9,15 @@ public class RightsidePlatformMethods : MonoBehaviour
     private bool spawned;
 
     private GameObject cam;
-    public float camMoveSpeed = 2f;
+    
     private bool moved;
 
-    
+    private float smoothTime = .2f;
+    private Vector3 velocity = Vector3.zero;
+    private Vector3 startPos;
+    private Vector3 targetPos;
+
+
 
     private void Awake()
     {
@@ -33,21 +38,33 @@ public class RightsidePlatformMethods : MonoBehaviour
         }
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (moved)
         {
-            var currentCamPos = cam.transform.position;
-            var newCamPos = new Vector3(cam.transform.position.x, this.gameObject.transform.position.y, cam.transform.position.z);
-            cam.transform.position = newCamPos;
+            startPos = cam.transform.position;
+            targetPos = new Vector3(startPos.x, gameObject.transform.position.y, startPos.z);
+            MoveCam();
+
+        }
+        if (startPos == targetPos)
+        {
             moved = false;
         }
-        
+
+    }
+
+    private void MoveCam()
+    {
+
+        cam.transform.position = Vector3.SmoothDamp(startPos, targetPos, ref velocity, smoothTime);
+
+
     }
     private void spawnPlatfrom()
     {
         var prefabIndex = Random.Range(0, prefabs.Length);
-        var positionX = Random.Range(1, 5.5f);
+        var positionX = Random.Range(2, 5.5f);
         var position = new Vector3(positionX, this.gameObject.transform.position.y + platformGap, prefabs[prefabIndex].transform.position.z);
 
         Instantiate(prefabs[prefabIndex], position, prefabs[prefabIndex].transform.rotation);
