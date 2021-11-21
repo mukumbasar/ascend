@@ -5,14 +5,14 @@ using UnityEngine;
 public class LeftsidePlatformMethods : MonoBehaviour
 {
     public GameObject[] prefabs;
-    public float platformGap = 16.74f;
+    public float platformGap = 9.64f;
     private bool spawned;
 
     private GameObject cam;
     
     private bool moved;
 
-    private float smoothTime = .2f;
+    private float smoothTime = .1f;
     private Vector3 velocity = Vector3.zero;
     private Vector3 startPos;
     private Vector3 targetPos;
@@ -43,8 +43,9 @@ public class LeftsidePlatformMethods : MonoBehaviour
     {
         if (moved)
         {
+            var offset = 5f;
             startPos = cam.transform.position;
-            targetPos = new Vector3(startPos.x, gameObject.transform.position.y, startPos.z);
+            targetPos = new Vector3(startPos.x, gameObject.transform.position.y + offset, startPos.z);
             MoveCam();
 
         }
@@ -58,8 +59,9 @@ public class LeftsidePlatformMethods : MonoBehaviour
 
     private void MoveCam()
     {
+       
         
-        cam.transform.position = Vector3.SmoothDamp(startPos, targetPos, ref velocity, smoothTime);
+        cam.transform.position = Vector3.SmoothDamp(startPos, targetPos , ref velocity, smoothTime);
         
 
     }

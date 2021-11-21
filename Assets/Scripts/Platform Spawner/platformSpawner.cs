@@ -28,7 +28,7 @@ public class platformSpawner : MonoBehaviour
         {
             positionX1 = Random.Range(2, 5.5f);
             var prefabIndex1 = Random.Range(0, rightsidePrefabs.Length);
-            var position1 = new Vector3(positionX1, 2.73f, rightsidePrefabs[prefabIndex1].transform.position.z);
+            var position1 = new Vector3(positionX1, 0.73f, rightsidePrefabs[prefabIndex1].transform.position.z);
 
             Instantiate(rightsidePrefabs[prefabIndex1], position1, rightsidePrefabs[prefabIndex1].transform.rotation);
 
@@ -38,7 +38,7 @@ public class platformSpawner : MonoBehaviour
         {
             positionX1 = Random.Range(-5.5f, -2f);
             var prefabIndex1 = Random.Range(0, leftsidePrefabs.Length);
-            var position1 = new Vector3(positionX1, 2.73f, leftsidePrefabs[prefabIndex1].transform.position.z);
+            var position1 = new Vector3(positionX1, 0.73f, leftsidePrefabs[prefabIndex1].transform.position.z);
 
             Instantiate(leftsidePrefabs[prefabIndex1], position1, leftsidePrefabs[prefabIndex1].transform.rotation);
 
@@ -53,7 +53,7 @@ public class platformSpawner : MonoBehaviour
         {
             var prefabIndex2 = Random.Range(0, leftsidePrefabs.Length);
             var positionX2 = Random.Range(-5.5f, -2);
-            var position2 = new Vector3(positionX2, 11.1f, leftsidePrefabs[prefabIndex2].transform.position.z);
+            var position2 = new Vector3(positionX2, 5.55f, leftsidePrefabs[prefabIndex2].transform.position.z);
 
             Instantiate(leftsidePrefabs[prefabIndex2], position2, leftsidePrefabs[prefabIndex2].transform.rotation);
 
@@ -63,7 +63,7 @@ public class platformSpawner : MonoBehaviour
         {
             var prefabIndex2 = Random.Range(0, rightsidePrefabs.Length);
             var positionX2 = Random.Range(2, 5.55f);
-            var position2 = new Vector3(positionX2, 11.1f, rightsidePrefabs[prefabIndex2].transform.position.z);
+            var position2 = new Vector3(positionX2, 5.55f, rightsidePrefabs[prefabIndex2].transform.position.z);
 
             Instantiate(rightsidePrefabs[prefabIndex2], position2, rightsidePrefabs[prefabIndex2].transform.rotation);
 

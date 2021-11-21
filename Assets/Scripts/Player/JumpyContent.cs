@@ -50,14 +50,14 @@ public class JumpyContent : MonoBehaviour
 
         }
 
-        if (jumpValue >= 15f && IsGrounded() && isFacingRight)
+        if (jumpValue >= 10f && IsGrounded() && isFacingRight)
         {
             rightJump = true;
 
 
         }
 
-        if (jumpValue >= 15f && IsGrounded() && !isFacingRight)
+        if (jumpValue >= 10f && IsGrounded() && !isFacingRight)
         {
             leftJump = true;
 
@@ -91,21 +91,21 @@ public class JumpyContent : MonoBehaviour
     {
         if(jumpValueEnhancing)
         {
-            jumpValue += 0.5f;
+            jumpValue += 0.4f;
         }
         if(rightJump)
         {
             float tempValue = jumpValue;
-            rb.velocity = new Vector2(0.4f*tempValue, 2.2f*tempValue);
+            rb.velocity = new Vector2(0.7f*tempValue, 2.2f*tempValue);
             jumpValueEnhancing = false;
             rightJump = false;
-            Invoke("ResetJumpValue", 0.4f);
+            Invoke("ResetJumpValue", 0.2f);
 
         }
         if(leftJump)
         { 
             float tempValue = jumpValue;
-            rb.velocity = new Vector2(-0.4f*tempValue, 2.2f*tempValue);
+            rb.velocity = new Vector2(-0.7f*tempValue, 2.2f*tempValue);
             jumpValueEnhancing = false;
             leftJump = false;
             Invoke("ResetJumpValue", 0.2f);

@@ -126,5 +126,4 @@ MonoBehaviour:
   - {fileID: 1541212662962523088, guid: a637a07dad51c45409ef23c1f5d6555e, type: 3}
   - {fileID: 60132461333290725}
   - {fileID: 7630432854330842325, guid: 885f17bd1d2d4f540825582635cc19a0, type: 3}
-  platformGap: 16.74
-  camMoveSpeed: 6
+  platformGap: 9.64
