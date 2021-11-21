@@ -50,14 +50,14 @@ public class JumpyContent : MonoBehaviour
 
         }
 
-        if (jumpValue >= 18f && IsGrounded() && isFacingRight)
+        if (jumpValue >= 15f && IsGrounded() && isFacingRight)
         {
             rightJump = true;
 
 
         }
 
-        if (jumpValue >= 18f && IsGrounded() && !isFacingRight)
+        if (jumpValue >= 15f && IsGrounded() && !isFacingRight)
         {
             leftJump = true;
 
