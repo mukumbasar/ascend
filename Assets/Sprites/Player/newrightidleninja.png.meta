@@ -1,55 +1,79 @@
 fileFormatVersion: 2
-guid: 360dc7f5f24f2bd479528e19c0fe9df4
+guid: 4d9f9f6320bc71041bfa1e33d4b4dd23
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6431621435080422309
-    second: rightidleninja_0
+      213: -1732879651751455108
+    second: newrightidleninja_0
   - first:
-      213: -6195906535793842753
-    second: rightidleninja_1
+      213: -528110610760690315
+    second: newrightidleninja_1
   - first:
-      213: -7544164693409582246
-    second: rightidleninja_2
+      213: -7077282480725148812
+    second: newrightidleninja_2
   - first:
-      213: -4342220642567861928
-    second: rightidleninja_3
+      213: -667852321911287300
+    second: newrightidleninja_3
   - first:
-      213: 3860125554580431491
-    second: rightidleninja_4
+      213: -4634123528307202176
+    second: newrightidleninja_4
   - first:
-      213: 6142987030320652051
-    second: rightidleninja_5
+      213: -6097685571245791988
+    second: newrightidleninja_5
   - first:
-      213: -2930324230649352319
-    second: rightidleninja_6
+      213: 4173825871725091431
+    second: newrightidleninja_6
   - first:
-      213: 4031070730769376092
-    second: rightidleninja_7
+      213: -646137084020551193
+    second: newrightidleninja_7
   - first:
-      213: 443224785403583384
-    second: rightidleninja_8
+      213: -2563957186120351440
+    second: newrightidleninja_8
   - first:
-      213: 5058456867123811662
-    second: rightidleninja_9
+      213: -7359721585813603929
+    second: newrightidleninja_9
   - first:
-      213: 6048908867916581920
-    second: rightidleninja_10
+      213: -4346186814279071272
+    second: newrightidleninja_10
   - first:
-      213: -1775075993698361967
-    second: rightidleninja_11
+      213: 3267515369811707958
+    second: newrightidleninja_11
   - first:
-      213: -3411086890685193078
-    second: rightidleninja_12
+      213: 4852429993913001577
+    second: newrightidleninja_12
   - first:
-      213: -7938800885874471123
-    second: rightidleninja_13
+      213: -7464994425573200218
+    second: newrightidleninja_13
   - first:
-      213: 8834503400561061853
-    second: rightidleninja_14
+      213: 1342136064731382073
+    second: newrightidleninja_14
   - first:
-      213: 7373486556790136921
-    second: rightidleninja_15
+      213: 648436649691985236
+    second: newrightidleninja_15
+  - first:
+      213: -6061059494055393970
+    second: newrightidleninja_16
+  - first:
+      213: -1855443591019318267
+    second: newrightidleninja_17
+  - first:
+      213: -3953742660282376975
+    second: newrightidleninja_18
+  - first:
+      213: 250890063806503636
+    second: newrightidleninja_19
+  - first:
+      213: 397554446870754395
+    second: newrightidleninja_20
+  - first:
+      213: -3235225722981138004
+    second: newrightidleninja_21
+  - first:
+      213: 6984956825409388482
+    second: newrightidleninja_22
+  - first:
+      213: 1646378611941013046
+    second: newrightidleninja_23
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -139,7 +163,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: rightidleninja_0
+      name: newrightidleninja_0
       rect:
         serializedVersion: 2
         x: 0
@@ -153,14 +177,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b5c4e38816a4eb6a0800000000000000
-      internalID: -6431621435080422309
+      spriteID: c761ade432393f7e0800000000000000
+      internalID: -1732879651751455108
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rightidleninja_1
+      name: newrightidleninja_1
       rect:
         serializedVersion: 2
         x: 48
@@ -174,14 +198,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb5ac7045d7b30aa0800000000000000
-      internalID: -6195906535793842753
+      spriteID: 5759e739236cba8f0800000000000000
+      internalID: -528110610760690315
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rightidleninja_2
+      name: newrightidleninja_2
       rect:
         serializedVersion: 2
         x: 96
@@ -195,14 +219,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a53374a9e2ebd4790800000000000000
-      internalID: -7544164693409582246
+      spriteID: 47b3841b41178cd90800000000000000
+      internalID: -7077282480725148812
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rightidleninja_3
+      name: newrightidleninja_3
       rect:
         serializedVersion: 2
         x: 144
@@ -216,14 +240,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 859cf57e4555db3c0800000000000000
-      internalID: -4342220642567861928
+      spriteID: cf1de060adf4bb6f0800000000000000
+      internalID: -667852321911287300
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rightidleninja_4
+      name: newrightidleninja_4
       rect:
         serializedVersion: 2
         x: 192
@@ -237,14 +261,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 382ac257dbbe19530800000000000000
-      internalID: 3860125554580431491
+      spriteID: 08728f1243940bfb0800000000000000
+      internalID: -4634123528307202176
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rightidleninja_5
+      name: newrightidleninja_5
       rect:
         serializedVersion: 2
         x: 240
@@ -258,14 +282,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 31f181a3826404550800000000000000
-      internalID: 6142987030320652051
+      spriteID: c05aed5a74ba06ba0800000000000000
+      internalID: -6097685571245791988
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rightidleninja_6
+      name: newrightidleninja_6
       rect:
         serializedVersion: 2
         x: 288
@@ -279,14 +303,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18fec6343a56557d0800000000000000
-      internalID: -2930324230649352319
+      spriteID: 76a528634886ce930800000000000000
+      internalID: 4173825871725091431
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rightidleninja_7
+      name: newrightidleninja_7
       rect:
         serializedVersion: 2
         x: 336
@@ -300,14 +324,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c53abfbd87d31f730800000000000000
-      internalID: 4031070730769376092
+      spriteID: 7e19fb6deb57807f0800000000000000
+      internalID: -646137084020551193
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rightidleninja_8
+      name: newrightidleninja_8
       rect:
         serializedVersion: 2
         x: 384
@@ -321,14 +345,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89b11a11896a62600800000000000000
-      internalID: 443224785403583384
+      spriteID: 0318cfd068efa6cd0800000000000000
+      internalID: -2563957186120351440
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rightidleninja_9
+      name: newrightidleninja_9
       rect:
         serializedVersion: 2
         x: 432
@@ -342,14 +366,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e45dc8448bf333640800000000000000
-      internalID: 5058456867123811662
+      spriteID: 7a93ecf06340dd990800000000000000
+      internalID: -7359721585813603929
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rightidleninja_10
+      name: newrightidleninja_10
       rect:
         serializedVersion: 2
         x: 480
@@ -363,14 +387,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02cc0ee119a02f350800000000000000
-      internalID: 6048908867916581920
+      spriteID: 8d9c8679e1e3fa3c0800000000000000
+      internalID: -4346186814279071272
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rightidleninja_11
+      name: newrightidleninja_11
       rect:
         serializedVersion: 2
         x: 528
@@ -384,14 +408,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19d194ad9c9ad57e0800000000000000
-      internalID: -1775075993698361967
+      spriteID: 63881c3baeb885d20800000000000000
+      internalID: 3267515369811707958
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rightidleninja_12
+      name: newrightidleninja_12
       rect:
         serializedVersion: 2
         x: 576
@@ -405,14 +429,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a84a7beab8269a0d0800000000000000
-      internalID: -3411086890685193078
+      spriteID: 966a2a4ce5b475340800000000000000
+      internalID: 4852429993913001577
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rightidleninja_13
+      name: newrightidleninja_13
       rect:
         serializedVersion: 2
         x: 624
@@ -426,14 +450,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d2f45e6e7a6b3d190800000000000000
-      internalID: -7938800885874471123
+      spriteID: 6ae20750f13076890800000000000000
+      internalID: -7464994425573200218
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rightidleninja_14
+      name: newrightidleninja_14
       rect:
         serializedVersion: 2
         x: 672
@@ -447,14 +471,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ddf2c6d19067a9a70800000000000000
-      internalID: 8834503400561061853
+      spriteID: 9310e82d3a930a210800000000000000
+      internalID: 1342136064731382073
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rightidleninja_15
+      name: newrightidleninja_15
       rect:
         serializedVersion: 2
         x: 720
@@ -468,8 +492,176 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 950289df4f2e35660800000000000000
-      internalID: 7373486556790136921
+      spriteID: 4553c3482b5bff800800000000000000
+      internalID: 648436649691985236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: newrightidleninja_16
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e45c156c08ac2eba0800000000000000
+      internalID: -6061059494055393970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: newrightidleninja_17
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 0
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 504b48072e32046e0800000000000000
+      internalID: -1855443591019318267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: newrightidleninja_18
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 0
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fc9f809ffb7129c0800000000000000
+      internalID: -3953742660282376975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: newrightidleninja_19
+      rect:
+        serializedVersion: 2
+        x: 912
+        y: 0
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4da9cda0f275b7300800000000000000
+      internalID: 250890063806503636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: newrightidleninja_20
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b54bb90c9a5648500800000000000000
+      internalID: 397554446870754395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: newrightidleninja_21
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 0
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca1c08d885b2a13d0800000000000000
+      internalID: -3235225722981138004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: newrightidleninja_22
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 0
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cf77fd893d8fe060800000000000000
+      internalID: 6984956825409388482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: newrightidleninja_23
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 0
+        width: 48
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6367b8aef9c19d610800000000000000
+      internalID: 1646378611941013046
       vertices: []
       indices: 
       edges: []

@@ -19,6 +19,9 @@ public class JumpyContent : MonoBehaviour
     private bool leftJump;
 
     public PhysicsMaterial2D normalMat, bouncyMat;
+
+    private Animator animator;
+    private bool jumpAnimation;
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -26,26 +29,18 @@ public class JumpyContent : MonoBehaviour
         isFacingRight = true;
         rightJump = false;
         leftJump = false;
+        animator = GetComponent<Animator>();
+        
         
     }
-    private void Update()
-    {
-        //changes the physics material of the character in air to enable wall bouncing and achieve stable landing
-        MaterialChanger();
-
-        //flips the character for accurate jumping
-        FlipPlayer();
-
-        //makes the character jump, duh
-        Jump();
-
-    }
+   
 
     private void Jump()
     {
-        if (Input.GetKey(KeyCode.Space) && IsGrounded())
+        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
         {
             jumpValueEnhancing = true;
+            
 
 
         }
@@ -53,6 +48,8 @@ public class JumpyContent : MonoBehaviour
         if (jumpValue >= 10f && IsGrounded() && isFacingRight)
         {
             rightJump = true;
+            
+
 
 
         }
@@ -60,57 +57,23 @@ public class JumpyContent : MonoBehaviour
         if (jumpValue >= 10f && IsGrounded() && !isFacingRight)
         {
             leftJump = true;
+            
+
 
         }
 
         if (Input.GetKeyUp(KeyCode.Space) && IsGrounded() && isFacingRight)
         {
             rightJump = true;
+            
+
 
         }
         if (Input.GetKeyUp(KeyCode.Space) && IsGrounded() && !isFacingRight)
         {
             leftJump = true;
-        }
-    }
+            
 
-    private void MaterialChanger()
-    {
-        if (!IsGrounded())
-        {
-            rb.sharedMaterial = bouncyMat;
-
-        }
-        else
-        {
-            rb.sharedMaterial = normalMat;
-        }
-    }
-
-    private void FixedUpdate()
-    {
-        if(jumpValueEnhancing)
-        {
-            jumpValue += 0.4f;
-        }
-        if(rightJump)
-        {
-            float tempValue = jumpValue;
-            rb.velocity = new Vector2(0.7f*tempValue, 2.2f*tempValue);
-            jumpValueEnhancing = false;
-            rightJump = false;
-            Invoke("ResetJumpValue", 0.2f);
-
-        }
-        if(leftJump)
-        { 
-            float tempValue = jumpValue;
-            rb.velocity = new Vector2(-0.7f*tempValue, 2.2f*tempValue);
-            jumpValueEnhancing = false;
-            leftJump = false;
-            Invoke("ResetJumpValue", 0.2f);
-
-        
         }
     }
 
@@ -133,9 +96,6 @@ public class JumpyContent : MonoBehaviour
         }
     }
 
-    
-
-    
 
     bool IsGrounded()
     {
@@ -163,4 +123,68 @@ public class JumpyContent : MonoBehaviour
         */
         return raycastHit.collider != null;
     }
+    private void MaterialChanger()
+    {
+        if (!IsGrounded())
+        {
+            rb.sharedMaterial = bouncyMat;
+            
+           
+            
+        }
+        else
+        {
+            rb.sharedMaterial = normalMat;
+        }
+    }
+
+  
+
+    private void FixedUpdate()
+    {
+        if(jumpValueEnhancing)
+        {
+            jumpValue += 0.4f;
+            animator.SetFloat("holdingjump", jumpValue);
+            
+        }
+        if(rightJump)
+        {
+            float tempValue = jumpValue;
+            rb.velocity = new Vector2(0.7f*tempValue, 2.2f*tempValue);
+            jumpValueEnhancing = false;
+            rightJump = false;
+            ResetJumpValue();
+            animator.SetFloat("holdingjump", jumpValue);
+
+        }
+        if(leftJump)
+        { 
+            float tempValue = jumpValue;
+            rb.velocity = new Vector2(-0.7f*tempValue, 2.2f*tempValue);
+            jumpValueEnhancing = false;
+            leftJump = false;
+            ResetJumpValue();
+            animator.SetFloat("holdingjump", jumpValue);
+
+
+        }
+    }
+
+    private void Update()
+    {
+        //changes the physics material of the character in air to enable wall bouncing and achieve stable landing
+        MaterialChanger();
+
+        //flips the character for accurate jumping
+        FlipPlayer();
+
+        //makes the character jump, duh
+        Jump();
+
+        
+
+    }
+
+   
 }
