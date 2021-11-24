@@ -69,7 +69,7 @@ public class LeftsidePlatformMethods : MonoBehaviour
     private void spawnPlatfrom()
     {
         var prefabIndex = Random.Range(0, prefabs.Length);
-        var positionX = Random.Range(-5.5f, -2f);
+        var positionX = Random.Range(-4.5f, -2f);
         var position = new Vector3(positionX, this.gameObject.transform.position.y + platformGap, prefabs[prefabIndex].transform.position.z);
 
         Instantiate(prefabs[prefabIndex], position, prefabs[prefabIndex].transform.rotation);
