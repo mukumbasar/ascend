@@ -5,14 +5,19 @@ using UnityEngine;
 public class MoveEnvironment : MonoBehaviour
 {
     private Vector3 currentPos;
-    private Vector3 firstBorder;
+    
 
     //for the first wall push
     private bool firstWallPush;
-   
+    private float dist1;
+    private Vector2 firstBorder;
+
 
     //for the second wall push
     private bool secondWallPush;
+    private float dist2;
+    private Vector2 secondBorder;
+
     
 
     public GameObject wallsTwo;
@@ -21,8 +26,10 @@ public class MoveEnvironment : MonoBehaviour
     private void Awake()
     {
         // for the first wall push
+
         
-        firstBorder = new Vector3(currentPos.x, currentPos.y + 7f, currentPos.z);
+        
+        firstBorder = new Vector2(this.gameObject.transform.position.x, this.gameObject.transform.position.y + 8.8f);
   
         firstWallPush = true;
 
@@ -30,23 +37,42 @@ public class MoveEnvironment : MonoBehaviour
 
     private void Update()
     {
-        currentPos = this.gameObject.transform.position;
-        var dist = Vector3.Distance(firstBorder, currentPos);
-        Debug.Log("ye" + dist);
+        if(firstWallPush)
+        {
+            currentPos = this.gameObject.transform.position;
 
-        //if (firstWallPush && Vector3.Distance(new Vector3(currentPos.x,currentPos.y + 8.79f,currentPos.z), currentPos) <= 0.1f)
-        //{
-        //    var wallsTwoPos = wallsTwo.transform.position;
-        //    wallsTwo.transform.position = new Vector3(wallsTwoPos.x, wallsTwoPos.y + 44f, wallsTwoPos.z);
-        //    firstWallPush = false;
-        //    secondWallPush = true;
-        //}
-        //    if (secondWallPush && distSecond <= 0.1f)
-        //    {
-        //        currentPos = this.gameObject.transform.position;
-        //        var secondDistPoint = new Vector3(currentPos.x, currentPos.y + 22f, currentPos.z);
-        //        distSecond = Vector3.Distance(secondDistPoint, currentPos);
-        //    }
-        //
+            dist1 = Vector2.Distance(firstBorder, currentPos);
+
+            Debug.Log(+dist1);
+
+            if (dist1 <= 0.1f)
+            {
+                wallsTwo.transform.position = new Vector2(wallsTwo.transform.position.x, wallsTwo.transform.position.y + 44);
+                firstWallPush = false;
+
+                secondWallPush = true;
+                secondBorder = new Vector2(firstBorder.x, firstBorder.y + 22);
+                
+
+            }
+        }
+
+        if(secondWallPush)
+        {
+            currentPos = this.gameObject.transform.position;
+            dist2 = Vector2.Distance(secondBorder, currentPos);
+            Debug.Log(dist2);
+            if (dist2 <= 0.1f)
+            {
+                wallsOne.transform.position = new Vector2(wallsOne.transform.position.x, wallsOne.transform.position.y + 44);
+                firstWallPush = true;
+
+                secondWallPush = false;
+                firstBorder = new Vector2(secondBorder.x, secondBorder.y + 22);
+            }
+        }
+        
+
+        
     }
 }
