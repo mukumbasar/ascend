@@ -45,13 +45,13 @@ public class MoveEnvironment : MonoBehaviour
 
             Debug.Log(+dist1);
 
-            if (dist1 <= 0.1f)
+            if (dist1 <= 0.2f)
             {
                 wallsTwo.transform.position = new Vector2(wallsTwo.transform.position.x, wallsTwo.transform.position.y + 50);
                 firstWallPush = false;
 
                 secondWallPush = true;
-                secondBorder = new Vector2(firstBorder.x, firstBorder.y + 22);
+                secondBorder = new Vector2(firstBorder.x, firstBorder.y + 25);
                 
 
             }
@@ -62,13 +62,14 @@ public class MoveEnvironment : MonoBehaviour
             currentPos = this.gameObject.transform.position;
             dist2 = Vector2.Distance(secondBorder, currentPos);
             Debug.Log(dist2);
-            if (dist2 <= 0.1f)
+            if (dist2 <= 0.2f)
             {
                 wallsOne.transform.position = new Vector2(wallsOne.transform.position.x, wallsOne.transform.position.y + 50);
+                Debug.Log("we shipped the wallone too");
                 firstWallPush = true;
 
                 secondWallPush = false;
-                firstBorder = new Vector2(secondBorder.x, secondBorder.y + 22);
+                firstBorder = new Vector2(secondBorder.x, secondBorder.y + 25);
             }
         }
         

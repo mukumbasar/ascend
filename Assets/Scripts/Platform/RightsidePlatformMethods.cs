@@ -17,13 +17,16 @@ public class RightsidePlatformMethods : MonoBehaviour
     private Vector3 startPos;
     private Vector3 targetPos;
 
-
+    // getting to the child object that contains the sprite
+    private SpriteRenderer leftChildSpriteRenderer;
+    public Sprite leftDamagedSprite;
 
     private void Awake()
     {
         spawned = false;
         moved = false;
         cam = GameObject.FindGameObjectWithTag("MainCamera");
+        leftChildSpriteRenderer = gameObject.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -31,7 +34,7 @@ public class RightsidePlatformMethods : MonoBehaviour
         if (collision.CompareTag("CrumblingStarter") && spawned == false)
         {
             spawnPlatfrom();
-            StartCoroutine("startCrumbling", 2f);
+            StartCoroutine("startCrumbling");
             spawned = true;
             moved = true;
             
@@ -73,10 +76,12 @@ public class RightsidePlatformMethods : MonoBehaviour
 
     IEnumerator startCrumbling()
     {
-        //play the first crumbling animation
-        yield return new WaitForSeconds(3f);
-        //play the second crumbling animation
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(0.5f);
+        //leftChildSpriteRenderer.sprite = leftDamagedSprite;
+        //yield return new WaitForSeconds(2f);
+        //Destroy(this.gameObject);
+
+
         //play the last crumbling animation with particles by using instantiate method
         //and then destroy the gameObject all together
 

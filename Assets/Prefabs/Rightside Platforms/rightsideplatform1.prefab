@@ -210,3 +210,4 @@ MonoBehaviour:
   - {fileID: 60132461333290725, guid: 5035931b8a290084a846029f89d50568, type: 3}
   - {fileID: 7630432854330842325, guid: 885f17bd1d2d4f540825582635cc19a0, type: 3}
   platformGap: 9.64
+  leftDamagedSprite: {fileID: 21300000, guid: 93e3008b4e17c5b4fa20c956db4e6b62, type: 3}
