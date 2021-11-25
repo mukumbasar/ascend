@@ -52,7 +52,7 @@ public class platformSpawner : MonoBehaviour
         if (twoSidedDice >= 0 && spawned == true)
         {
             var prefabIndex2 = Random.Range(0, leftsidePrefabs.Length);
-            var positionX2 = Random.Range(-5.5f, -2);
+            var positionX2 = Random.Range(-4.5f, -2);
             var position2 = new Vector3(positionX2, 13.32f, leftsidePrefabs[prefabIndex2].transform.position.z);
 
             Instantiate(leftsidePrefabs[prefabIndex2], position2, leftsidePrefabs[prefabIndex2].transform.rotation);
@@ -62,7 +62,7 @@ public class platformSpawner : MonoBehaviour
         else if (twoSidedDice < 0 && spawned == true)
         {
             var prefabIndex2 = Random.Range(0, rightsidePrefabs.Length);
-            var positionX2 = Random.Range(2, 5.55f);
+            var positionX2 = Random.Range(2, 4.5f);
             var position2 = new Vector3(positionX2, 13.32f, rightsidePrefabs[prefabIndex2].transform.position.z);
 
             Instantiate(rightsidePrefabs[prefabIndex2], position2, rightsidePrefabs[prefabIndex2].transform.rotation);

@@ -47,7 +47,7 @@ public class MoveEnvironment : MonoBehaviour
 
             if (dist1 <= 0.1f)
             {
-                wallsTwo.transform.position = new Vector2(wallsTwo.transform.position.x, wallsTwo.transform.position.y + 44);
+                wallsTwo.transform.position = new Vector2(wallsTwo.transform.position.x, wallsTwo.transform.position.y + 50);
                 firstWallPush = false;
 
                 secondWallPush = true;
@@ -64,7 +64,7 @@ public class MoveEnvironment : MonoBehaviour
             Debug.Log(dist2);
             if (dist2 <= 0.1f)
             {
-                wallsOne.transform.position = new Vector2(wallsOne.transform.position.x, wallsOne.transform.position.y + 44);
+                wallsOne.transform.position = new Vector2(wallsOne.transform.position.x, wallsOne.transform.position.y + 50);
                 firstWallPush = true;
 
                 secondWallPush = false;
