@@ -1786,7 +1786,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: -1732879651751455108, guid: 4d9f9f6320bc71041bfa1e33d4b4dd23, type: 3}
   m_Color: {r: 1, g: 0.7962264, b: 0.9496392, a: 1}
   m_FlipX: 0
@@ -1806,7 +1806,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 943987667}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.11, y: 4.11, z: 0}
+  m_LocalPosition: {x: 3.31, y: 4.11, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 378575136}
@@ -4009,10 +4009,50 @@ PrefabInstance:
       propertyPath: wallsTwo
       value: 
       objectReference: {fileID: 1067235454}
+    - target: {fileID: 1990895280, guid: 2f647d6f66a670d46b783e1dc1000718, type: 3}
+      propertyPath: m_SortingOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1990895281, guid: 2f647d6f66a670d46b783e1dc1000718, type: 3}
+      propertyPath: ExternalForcesModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1990895281, guid: 2f647d6f66a670d46b783e1dc1000718, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 1990895281, guid: 2f647d6f66a670d46b783e1dc1000718, type: 3}
+      propertyPath: InitialModule.startSize.minScalar
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1990895281, guid: 2f647d6f66a670d46b783e1dc1000718, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1990895281, guid: 2f647d6f66a670d46b783e1dc1000718, type: 3}
+      propertyPath: InitialModule.startRotation.scalar
+      value: 3.1415925
+      objectReference: {fileID: 0}
     - target: {fileID: 1990895281, guid: 2f647d6f66a670d46b783e1dc1000718, type: 3}
       propertyPath: CollisionModule.m_Planes.Array.data[0]
       value: 
       objectReference: {fileID: 1842731238}
+    - target: {fileID: 1990895281, guid: 2f647d6f66a670d46b783e1dc1000718, type: 3}
+      propertyPath: InitialModule.startRotation.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1990895281, guid: 2f647d6f66a670d46b783e1dc1000718, type: 3}
+      propertyPath: InitialModule.startRotationX.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1990895281, guid: 2f647d6f66a670d46b783e1dc1000718, type: 3}
+      propertyPath: InitialModule.startRotationY.minMaxState
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1990895281, guid: 2f647d6f66a670d46b783e1dc1000718, type: 3}
+      propertyPath: ExternalForcesModule.influenceMask.m_Bits
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 4401589212507553293, guid: 2f647d6f66a670d46b783e1dc1000718, type: 3}
       propertyPath: m_Name
       value: Main Camera

@@ -151,7 +151,7 @@ public class JumpyContent : MonoBehaviour
         if(rightJump)
         {
             float tempValue = jumpValue;
-            rb.velocity = new Vector2(0.7f*tempValue, 2f*tempValue);
+            rb.velocity = new Vector2(0.6f*tempValue, 1.8f*tempValue);
             jumpValueEnhancing = false;
             rightJump = false;
             ResetJumpValue();
@@ -161,7 +161,7 @@ public class JumpyContent : MonoBehaviour
         if(leftJump)
         { 
             float tempValue = jumpValue;
-            rb.velocity = new Vector2(-0.7f*tempValue, 2f*tempValue);
+            rb.velocity = new Vector2(-0.6f*tempValue, 1.8f*tempValue);
             jumpValueEnhancing = false;
             leftJump = false;
             ResetJumpValue();
