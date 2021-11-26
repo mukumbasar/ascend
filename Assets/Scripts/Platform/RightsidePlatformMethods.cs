@@ -44,7 +44,7 @@ public class RightsidePlatformMethods : MonoBehaviour
             spawnPlatfrom();
             StartCoroutine("startCrumbling");
 
-            scoreText = GameObject.Find("Text (TMP)");
+            scoreText = GameObject.Find("Score Text");
             scoreText.GetComponent<TextMeshProUGUI>().enabled = true;
 
 
@@ -104,9 +104,9 @@ public class RightsidePlatformMethods : MonoBehaviour
     IEnumerator startCrumbling()
     {
         yield return new WaitForSeconds(0.5f);
-        //leftChildSpriteRenderer.sprite = leftDamagedSprite;
-        //yield return new WaitForSeconds(2f);
-        //Destroy(this.gameObject);
+        leftChildSpriteRenderer.sprite = leftDamagedSprite;
+        yield return new WaitForSeconds(2f);
+        Destroy(this.gameObject);
 
 
         //play the last crumbling animation with particles by using instantiate method

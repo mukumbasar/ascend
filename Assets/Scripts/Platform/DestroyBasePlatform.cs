@@ -17,7 +17,7 @@ public class DestroyBasePlatform : MonoBehaviour
     }
     IEnumerator startBaseCrumbling()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(2);
         Destroy(basePlatform);
         yield return new WaitForSeconds(4);
         Destroy(this.gameObject);

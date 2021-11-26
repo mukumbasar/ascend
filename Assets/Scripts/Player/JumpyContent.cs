@@ -30,6 +30,12 @@ public class JumpyContent : MonoBehaviour
         rightJump = false;
         leftJump = false;
         animator = GetComponent<Animator>();
+
+        // randomizing players starting position
+
+        var startingPos = Random.Range(-6, 6f);
+
+        this.gameObject.transform.position = new Vector2(startingPos, transform.position.y);
         
         
     }
