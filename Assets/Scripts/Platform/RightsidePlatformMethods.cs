@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class RightsidePlatformMethods : MonoBehaviour
 {
     public GameObject[] prefabs;
     public float platformGap = 9.64f;
-    private bool spawned;
+    private bool spawnedPlatform;
 
     private GameObject cam;
     
@@ -21,23 +23,36 @@ public class RightsidePlatformMethods : MonoBehaviour
     private SpriteRenderer leftChildSpriteRenderer;
     public Sprite leftDamagedSprite;
 
+    //score text and activating it
+    private GameObject scoreText;
+    private bool spawnedText;
+    private float newScore;
+
     private void Awake()
     {
-        spawned = false;
+        spawnedPlatform = false;
         moved = false;
+        spawnedText = false;
         cam = GameObject.FindGameObjectWithTag("MainCamera");
         leftChildSpriteRenderer = gameObject.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("CrumblingStarter") && spawned == false)
+        if (collision.CompareTag("CrumblingStarter") && spawnedPlatform == false && spawnedText == false)
         {
             spawnPlatfrom();
             StartCoroutine("startCrumbling");
-            spawned = true;
+
+            scoreText = GameObject.Find("Text (TMP)");
+            scoreText.GetComponent<TextMeshProUGUI>().enabled = true;
+
+
+
+            spawnedPlatform = true;
+            spawnedText = true;
             moved = true;
-            
+
         }
     }
 
@@ -55,9 +70,21 @@ public class RightsidePlatformMethods : MonoBehaviour
         {
             moved = false;
         }
-
+        if (spawnedText)
+        {
+            scoreCounter();
+            Debug.Log("counted");
+            spawnedText = false;
+        }
     }
 
+    private void scoreCounter()
+    {
+        newScore = float.Parse(scoreText.GetComponent<TextMeshProUGUI>().text);
+        newScore++;
+        scoreText.GetComponent<TextMeshProUGUI>().text = newScore.ToString();
+
+    }
     private void MoveCam()
     {
         

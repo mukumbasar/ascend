@@ -129,6 +129,7 @@ MonoBehaviour:
   - {fileID: 7630432854330842325, guid: f8cf78965a0d6214eadfbd86fa008052, type: 3}
   platformGap: 9.64
   leftDamagedSprite: {fileID: 21300000, guid: f233982062cf5bc4592c023b5f608e1c, type: 3}
+  scoreText: {fileID: 673241359827118751, guid: 2b2558a4a97510d4892e2866f53783cc, type: 3}
 --- !u!1 &2423291892135654506
 GameObject:
   m_ObjectHideFlags: 0
