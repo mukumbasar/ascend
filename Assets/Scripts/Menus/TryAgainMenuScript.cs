@@ -37,10 +37,21 @@ public class TryAgainMenuScript : MonoBehaviour
         }
     }
 
+    public void Exit()
+    {
+        Application.Quit();
+    }
+
     public void RestartTheScene()
     {
         Time.timeScale = 1;
         SceneManager.LoadScene("Game");
 
+    }
+
+    public void GoBackToMenu()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 }
