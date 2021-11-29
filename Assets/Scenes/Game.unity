@@ -1742,7 +1742,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 88.9}
+  m_AnchoredPosition: {x: 0, y: 83}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &551751625
@@ -1828,7 +1828,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: -7.329933, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -4400,7 +4400,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.3, y: -180.3}
+  m_AnchoredPosition: {x: 0.000030994, y: -178}
   m_SizeDelta: {x: 304.802, y: 73.578}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1347500161
@@ -4632,7 +4632,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.5529412}
+  m_Color: {r: 0.3018868, g: 0.3018868, b: 0.3018868, a: 0.69411767}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5319,7 +5319,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 673241359827118748, guid: 2b2558a4a97510d4892e2866f53783cc, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 7.3
+      value: 7.299999
       objectReference: {fileID: 0}
     - target: {fileID: 673241359827118748, guid: 2b2558a4a97510d4892e2866f53783cc, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -5345,7 +5345,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 673241359827118749, guid: 2b2558a4a97510d4892e2866f53783cc, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 673241359827118751, guid: 2b2558a4a97510d4892e2866f53783cc, type: 3}
       propertyPath: m_Name
