@@ -22,6 +22,10 @@ public class JumpyContent : MonoBehaviour
 
     private Animator animator;
     private bool jumpAnimation;
+
+    private AudioSource landingSource;
+    private bool playedTheSound;
+    
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -29,6 +33,7 @@ public class JumpyContent : MonoBehaviour
         isFacingRight = true;
         rightJump = false;
         leftJump = false;
+        playedTheSound = true;
         animator = GetComponent<Animator>();
 
         // randomizing players starting position
@@ -36,6 +41,10 @@ public class JumpyContent : MonoBehaviour
         var startingPos = Random.Range(-6, 6f);
 
         this.gameObject.transform.position = new Vector2(startingPos, transform.position.y);
+
+        // audio source for landing
+
+        landingSource = gameObject.GetComponent<AudioSource>();
         
         
     }
@@ -141,9 +150,23 @@ public class JumpyContent : MonoBehaviour
         else
         {
             rb.sharedMaterial = normalMat;
+
         }
     }
 
+    private void LandingSound()
+    {
+        
+        if (IsGrounded() && !playedTheSound)
+        {
+            landingSource.Play();
+            playedTheSound = true;
+        }
+        if(!IsGrounded())
+        {
+            playedTheSound = false;
+        }
+    }
   
 
     private void FixedUpdate()
@@ -177,6 +200,7 @@ public class JumpyContent : MonoBehaviour
         }
     }
 
+   
     private void Update()
     {
         //changes the physics material of the character in air to enable wall bouncing and achieve stable landing
@@ -188,7 +212,11 @@ public class JumpyContent : MonoBehaviour
         //makes the character jump, duh
         Jump();
 
-        
+        //for the landing clip
+        LandingSound();
+
+
+
 
     }
 

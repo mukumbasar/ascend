@@ -5,9 +5,21 @@ using UnityEngine;
 public class DestroyBasePlatform : MonoBehaviour
 {
     public GameObject basePlatform;
+
+    public Rigidbody2D rb;
+
+    private AudioSource cracking;
+
+    private bool ifCondition;
+
+    private void Awake()
+    {
+        cracking = gameObject.GetComponent<AudioSource>();
+        ifCondition = true;
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("CrumblingStarter"))
+        if (collision.CompareTag("CrumblingStarter") && ifCondition)
         {
 
             StartCoroutine("startBaseCrumbling");
@@ -17,9 +29,13 @@ public class DestroyBasePlatform : MonoBehaviour
     }
     IEnumerator startBaseCrumbling()
     {
-        yield return new WaitForSeconds(2);
+        ifCondition = false;
+        yield return new WaitForSeconds(1);
         Destroy(basePlatform);
-        yield return new WaitForSeconds(4);
-        Destroy(this.gameObject);
+        cracking.Play(); 
+        yield return new WaitForSeconds(3.5f);
+        rb.bodyType = RigidbodyType2D.Dynamic;
+        rb.mass = 1000;
+        rb.gravityScale = 10;
     }
 }

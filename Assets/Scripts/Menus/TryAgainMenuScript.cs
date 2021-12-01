@@ -24,6 +24,11 @@ public class TryAgainMenuScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if(collision.CompareTag("platform"))
+        {
+            Destroy(collision.gameObject);
+        }
+
         if(collision.CompareTag("Player"))
         {
             

@@ -19,14 +19,21 @@ public class RightsidePlatformMethods : MonoBehaviour
     private Vector3 startPos;
     private Vector3 targetPos;
 
-    // getting to the child object that contains the sprite
+    // getting to the child object that contains the damaged sprite variant
     private SpriteRenderer leftChildSpriteRenderer;
     public Sprite leftDamagedSprite;
+
+    // rb for the crumbling process
+
+    private Rigidbody2D rbRight;
 
     //score text and activating it
     private GameObject scoreText;
     private bool spawnedText;
     private float newScore;
+
+    // cracking sound
+    private AudioSource crackingSound;
 
     private void Awake()
     {
@@ -35,12 +42,18 @@ public class RightsidePlatformMethods : MonoBehaviour
         spawnedText = false;
         cam = GameObject.FindGameObjectWithTag("MainCamera");
         leftChildSpriteRenderer = gameObject.transform.GetChild(0).gameObject.GetComponent<SpriteRenderer>();
+        rbRight = gameObject.GetComponent<Rigidbody2D>();
+        crackingSound = gameObject.GetComponent<AudioSource>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("CrumblingStarter") && spawnedPlatform == false && spawnedText == false)
         {
+            spawnedPlatform = true;
+            spawnedText = true;
+            moved = true;
+
             spawnPlatfrom();
             StartCoroutine("startCrumbling");
 
@@ -49,9 +62,7 @@ public class RightsidePlatformMethods : MonoBehaviour
 
 
 
-            spawnedPlatform = true;
-            spawnedText = true;
-            moved = true;
+           
 
         }
     }
@@ -104,9 +115,10 @@ public class RightsidePlatformMethods : MonoBehaviour
     IEnumerator startCrumbling()
     {
         yield return new WaitForSeconds(0.5f);
+        crackingSound.Play();
         leftChildSpriteRenderer.sprite = leftDamagedSprite;
         yield return new WaitForSeconds(2f);
-        Destroy(this.gameObject);
+        rbRight.bodyType = RigidbodyType2D.Dynamic;
 
 
         //play the last crumbling animation with particles by using instantiate method
