@@ -34,8 +34,6 @@ public class DestroyBasePlatform : MonoBehaviour
         Destroy(basePlatform);
         cracking.Play(); 
         yield return new WaitForSeconds(3.5f);
-        rb.bodyType = RigidbodyType2D.Dynamic;
-        rb.mass = 1000;
-        rb.gravityScale = 10;
+        Destroy(gameObject);
     }
 }
